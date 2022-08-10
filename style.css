@@ -72,26 +72,113 @@ body {
   height: 60px;
 }
 
+.form-container {
+  background-color: #000000;
+  color: aqua;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#new-game-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  background-color: transparent;
+  color: white;
+  border: 1px white solid;
+  font-size: 1rem;
+}
+
+select {
+  background-color: transparent;
+  color: white;
+  border: 1px white solid;
+  font-size: 1rem;
+}
+
+option {
+  background-color: black;
+  color: white;
+}
+
+.player-fields {
+  border: aqua 1px solid;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+label {
+  width: 300px;
+  text-align: left;
+  margin: 5px;
+}
+
 .main {
   width: 300px;
   margin: 10px auto;
 }
 
-.game-container {
+.board-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid aqua;
   border-radius: 5px;
   margin: 5px;
   background-color: transparent;
   aspect-ratio: 1;
+  font-size: 4rem;
+  color: aqua;
 }
 
-.cell:hover {
+.empty:hover {
   background-color: aqua;
+}
+
+button {
+  background-color: aqua;
+  color: #171a5f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid aqua;
+  color: aqua;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 520px) {
@@ -99,11 +186,37 @@ body {
     width: 500px;
     margin: 15px auto;
   }
+
+  .cell {
+    font-size: 6rem;
+  }
+
+  .player-inputs {
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.5rem;
+  }
+
+  label {
+    margin: 10px;;
+  }
+
+  input {
+    font-size: 1.5rem;
+  }
+
+  select {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 920px) {
   .main {
     width: 900px;
     margin: 20px auto;
+  }
+
+  .cell {
+    font-size: 8rem;
   }
 }
