@@ -156,12 +156,12 @@ const gameFactory = (player1, player2) => {
     displayController.updateBoard();
     if (gameBoard.winnerCheck()) {
       winner();
-      console.log('----------------TURN ENDED-----------------')
+      console.log('----------------TURN ENDED----------------')
     } else if (gameBoard.tieCheck()) {
-      console.log('----------------TURN ENDED-----------------')
+      console.log('----------------TURN ENDED----------------')
       tie();
     } else {
-      console.log('----------------TURN ENDED-----------------')
+      console.log('----------------TURN ENDED----------------')
       changeActivePlayer();
       promptPlayerToChoose();
     }
